@@ -26,6 +26,8 @@ Then open http://localhost:4960. Add `?t=12.5` to open the demo paused at that s
 
 ## Deploy
 
+The repo is connected to the `spendmail` Vercel project: every push to `main` deploys to production, and other branches get preview links. To deploy by hand instead:
+
 ```bash
 vercel deploy --prod --yes
 ```
