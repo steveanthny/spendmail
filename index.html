@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SpendMail · Just cc SpendRule.</title>
+  <meta name="description" content="SpendMail is SpendRule by email. Cc SpendMail on contracts, invoices and vendor emails. It checks every invoice against the agreement and settles what is off with the vendor.">
+  <meta name="theme-color" content="#f5f6f7">
+  <link rel="icon" href="assets/logo-arrow.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@1&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preload" as="image" href="assets/clouds.webp" type="image/webp">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div class="page">
+  <main class="main">
+
+    <!-- Left column: Figma 3275:7932 (nav) + 3279:8070 (hero) -->
+    <section class="intro">
+      <header class="brand">
+        <a class="brand__home" href="/" aria-label="SpendMail home">
+          <span class="logo">
+            <svg class="logo__trail" viewBox="-24 -8 140 50" aria-hidden="true">
+              <defs><mask id="trail-mask" maskUnits="userSpaceOnUse" x="-24" y="-8" width="140" height="50"><path class="logo__trail-mask" pathLength="1"/></mask></defs>
+              <path class="logo__trail-line" mask="url(#trail-mask)"/>
+            </svg>
+            <img class="logo__word" src="assets/logo-wordmark.svg" width="100.79" height="20.0464" alt="">
+            <img class="logo__dot" src="assets/logo-idot.svg" width="3.39577" height="3.32531" alt="">
+            <span class="logo__plane"><img src="assets/logo-arrow.svg" width="14" height="14" alt=""></span>
+          </span>
+          <span class="brand__sub">A product of SpendRule.</span>
+        </a>
+        <span class="soon">Coming Soon</span>
+      </header>
+
+      <div class="hero">
+        <h1 class="hero__title" aria-label="Just cc SpendRule.">
+          <span class="line" aria-hidden="true"><span class="line__in">Just cc</span></span>
+          <span class="line" aria-hidden="true"><span class="line__in">SpendRule.</span></span>
+        </h1>
+
+        <div class="hero__body">
+          <div class="hero__copy">
+            <p>SpendMail is <a class="ink" href="https://spendrule.com/" target="_blank" rel="noopener">SpendRule</a> by email. Cc, bcc or forward SpendMail on your contracts, invoices and vendor emails. SpendRule reads every agreement, checks every invoice against it and settles what is off with the vendor, within the mandate you set.</p>
+            <p class="hero__strong">No new portal. Just your inbox.</p>
+          </div>
+
+          <form class="join" novalidate>
+            <div class="join__row">
+              <label class="sr-only" for="email">Work email</label>
+              <div class="join__field">
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@workemail.com" required>
+                <svg class="join__tick" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <button class="join__btn magnetic" type="submit">
+                <span class="join__fill" aria-hidden="true"></span>
+                <img class="join__dot" src="assets/dot.svg" width="8" height="8" alt="">
+                <span class="join__label swap"><span class="swap__in">Be Among the First</span></span>
+              </button>
+            </div>
+            <p class="join__msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right column: Figma 3275:7973 -->
+    <section class="stage" aria-labelledby="stage-title">
+      <h2 id="stage-title" class="sr-only">How SpendMail handles an invoice: it is cc'd, validates the lines against the contract, negotiates with the vendor and corrects the invoice before payment.</h2>
+      <div class="stage__clouds" aria-hidden="true">
+        <img class="cloud cloud--a" src="assets/clouds.webp" alt="" decoding="async">
+        <img class="cloud cloud--b" src="assets/clouds.webp" alt="" decoding="async">
+      </div>
+      <div class="stage__glow" aria-hidden="true"></div>
+
+      <ol class="steps">
+        <li><button class="chip" type="button" data-stage="0" aria-label="Step 1, CC">CC</button></li>
+        <li class="conn" aria-hidden="true"><img src="assets/connector.svg" width="36" height="1" alt=""><span class="conn__dot"></span></li>
+        <li><button class="chip" type="button" data-stage="1" aria-label="Step 2, Validate">Validate</button></li>
+        <li class="conn" aria-hidden="true"><img src="assets/connector.svg" width="36" height="1" alt=""><span class="conn__dot"></span></li>
+        <li><button class="chip" type="button" data-stage="2" aria-label="Step 3, Negotiate">Negotiate</button></li>
+        <li class="conn" aria-hidden="true"><img src="assets/connector.svg" width="36" height="1" alt=""><span class="conn__dot"></span></li>
+        <li><button class="chip" type="button" data-stage="3" aria-label="Step 4, Correct">Correct</button></li>
+      </ol>
+
+      <div class="tilt">
+        <article class="card" aria-label="Example email thread">
+          <header class="card__head">
+            <div class="card__row">
+              <span class="swap" data-k="from"><span class="swap__in">From: billing@northlineimaging.com</span></span>
+              <span class="swap card__meta" data-k="meta"><span class="swap__in">Received</span></span>
+            </div>
+            <p class="card__subject swap" data-k="subject"><span class="swap__in">INV-2291 · Northline Imaging</span></p>
+            <div class="bar"><span class="bar__fill"></span></div>
+          </header>
+
+          <div class="views">
+
+            <!-- 1 · CC: the vendor's invoice arrives with SpendMail on cc -->
+            <div class="view v-cc" data-view="0">
+              <dl class="mailto" data-in="0.2">
+                <div><dt>To</dt><dd>ap@yourcompany.com</dd></div>
+                <div><dt>Cc</dt><dd><span class="cc"><span class="cc__typed"></span><span class="caret"></span></span></dd></div>
+              </dl>
+              <p class="lead" data-in="0.5">Hi team, please find invoice INV-2291 attached for September imaging services. Payment is due in 30 days.</p>
+              <div class="file" data-in="1.1">
+                <span class="file__icon" aria-hidden="true">PDF</span>
+                <span class="file__text"><b>INV-2291.pdf</b><small>14 line items · $18,620.00</small></span>
+              </div>
+              <div class="handoff" data-in="2.9">
+                <span class="handoff__av" aria-hidden="true"><img src="assets/logo-arrow.svg" width="14" height="14" alt=""></span>
+                <span class="handoff__text"><b>SpendMail picked it up</b><small>Matched to MSA_2023_v2 · Northline Imaging</small></span>
+                <span class="spin" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <!-- 2 · Validate: every line checked against the contract -->
+            <div class="view v-val" data-view="1">
+              <p class="lead lead--val"><span class="swap" data-k="verb"><span class="swap__in">Checking</span></span> 14 line items against <b>MSA_2023_v2</b><span class="lead__tail" data-k="tail">…</span></p>
+              <ul class="lines" data-in="0.2">
+                <li class="li" data-in="0.3" data-done="1.2" tabindex="0">
+                  <span class="li__text"><b>MRI service, line 4</b><small>12 × $1,240 · contract $980 · §3.2</small></span>
+                  <span class="pills"><span class="pill pill--wait"><i class="spin spin--xs"></i>Checking</span><span class="pill pill--bad">Over rate</span></span>
+                  <span class="tip" role="tooltip">§3.2 · MRI, per study: <b>$980.00</b></span>
+                </li>
+                <li class="li" data-in="0.5" data-done="2.0" tabindex="0">
+                  <span class="li__text"><b>After-hours fee, line 9</b><small>$740 · Outside scope · §5.1</small></span>
+                  <span class="pills"><span class="pill pill--wait"><i class="spin spin--xs"></i>Checking</span><span class="pill pill--warn">Review</span></span>
+                  <span class="tip" role="tooltip">§5.1 · Needs a signed work order</span>
+                </li>
+                <li class="li" data-in="0.7" data-done="2.8" tabindex="0">
+                  <span class="li__text"><b>12 other lines</b><small>Match contracted terms</small></span>
+                  <span class="pills"><span class="pill pill--wait"><i class="spin spin--xs"></i>Checking</span><span class="pill pill--good">Matched</span></span>
+                  <span class="tip" role="tooltip">Rates, quantities and dates all in terms</span>
+                </li>
+                <li class="scan" aria-hidden="true"></li>
+              </ul>
+              <div class="sum" data-in="0.9">
+                <span class="sum__label">Hold before payment</span>
+                <strong class="sum__amt" data-count="3860" data-at="3.6" data-prefix="$">—</strong>
+              </div>
+            </div>
+
+            <!-- 3 · Negotiate: SpendMail settles it with the vendor -->
+            <div class="view v-neg" data-view="2">
+              <ol class="thread">
+                <li class="msg msg--agent" data-in="0.3"><div class="msg__in">
+                  <span class="av av--agent" aria-hidden="true"><img src="assets/logo-arrow.svg" width="14" height="14" alt=""></span>
+                  <div class="msg__body"><p class="msg__who">SpendMail agent <time>09:14</time></p><p>Line 4 is billed at $1,240; §3.2 sets $980. Line 9 needs a signed work order under §5.1. Could you reissue?</p></div>
+                </div></li>
+                <li class="msg msg--typing" data-in="1.3" data-out="2.5"><div class="msg__in">
+                  <span class="av av--vendor" aria-hidden="true">NI</span>
+                  <div class="msg__body"><span class="dots"><i></i><i></i><i></i></span><span class="msg__hint">Northline is typing</span></div>
+                </div></li>
+                <li class="msg msg--vendor" data-in="2.5"><div class="msg__in">
+                  <span class="av av--vendor" aria-hidden="true">NI</span>
+                  <div class="msg__body"><p class="msg__who">Northline billing <time>10:02</time></p><p>Agreed on line 4. Line 9 was a weekend call-out.</p></div>
+                </div></li>
+                <li class="msg msg--agent" data-in="4.5"><div class="msg__in">
+                  <span class="av av--agent" aria-hidden="true"><img src="assets/logo-arrow.svg" width="14" height="14" alt=""></span>
+                  <div class="msg__body"><p class="msg__who">SpendMail agent <time>10:05</time></p><p>No work order on file for 14 Sep. Happy to apply it if you have one.</p></div>
+                </div></li>
+                <li class="msg msg--typing" data-in="5.6" data-out="6.9"><div class="msg__in">
+                  <span class="av av--vendor" aria-hidden="true">NI</span>
+                  <div class="msg__body"><span class="dots"><i></i><i></i><i></i></span><span class="msg__hint">Northline is typing</span></div>
+                </div></li>
+                <li class="msg msg--vendor" data-in="6.9"><div class="msg__in">
+                  <span class="av av--vendor" aria-hidden="true">NI</span>
+                  <div class="msg__body"><p class="msg__who">Northline billing <time>13:11</time></p><p>Understood. Corrected invoice attached.</p>
+                    <span class="file file--sm"><span class="file__icon" aria-hidden="true">PDF</span><span class="file__text"><b>INV-2291-R.pdf</b><small>14 line items</small></span></span>
+                  </div>
+                </div></li>
+              </ol>
+            </div>
+
+            <!-- 4 · Correct: corrected invoice re-checked, ready to pay -->
+            <div class="view v-fix" data-view="3">
+              <p class="lead" data-in="0.1">Checked <b>INV-2291-R</b>. 14 of 14 lines match. Nothing left on hold.</p>
+              <ul class="lines" data-in="0.2">
+                <li class="li" data-in="0.3" tabindex="0">
+                  <span class="li__text"><b>MRI service, line 4</b><small>12 × $980 · matches §3.2</small></span>
+                  <span class="pills"><span class="pill pill--good">Corrected</span></span>
+                  <span class="tip" role="tooltip">Was $1,240 per study · saved $3,120</span>
+                </li>
+                <li class="li" data-in="0.55" tabindex="0">
+                  <span class="li__text"><b>After-hours fee, line 9</b><small><s>$740</s> · removed, no work order · §5.1</small></span>
+                  <span class="pills"><span class="pill pill--muted">Removed</span></span>
+                  <span class="tip" role="tooltip">Vendor withdrew the charge · saved $740</span>
+                </li>
+                <li class="li" data-in="0.8" tabindex="0">
+                  <span class="li__text"><b>12 other lines</b><small>Match contracted terms</small></span>
+                  <span class="pills"><span class="pill pill--good">Matched</span></span>
+                  <span class="tip" role="tooltip">Unchanged from the first check</span>
+                </li>
+              </ul>
+              <div class="sum sum--final" data-in="1.1">
+                <span class="sum__label">Saved before payment<small>Now $14,760, was $18,620</small></span>
+                <strong class="sum__amt sum__amt--saved" data-count="3860" data-at="1.2" data-prefix="$">—</strong>
+                <button class="approve" type="button"><span class="approve__label swap"><span class="swap__in">Approve $14,760</span></span></button>
+              </div>
+            </div>
+
+          </div>
+        </article>
+      </div>
+
+      <div class="ctrl">
+        <button class="ctrl__btn" type="button" aria-label="Pause the demo">
+          <svg class="ctrl__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle class="ctrl__ring-fill" cx="16" cy="16" r="14.5" pathLength="100"/></svg>
+          <svg class="ctrl__icon ctrl__icon--pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2.5" y="2" width="2.4" height="8" rx=".8"/><rect x="7.1" y="2" width="2.4" height="8" rx=".8"/></svg>
+          <svg class="ctrl__icon ctrl__icon--play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.2v7.6a.6.6 0 0 0 .9.5l6-3.8a.6.6 0 0 0 0-1L4.4 1.7a.6.6 0 0 0-.9.5z"/></svg>
+        </button>
+        <span class="ctrl__label swap"><span class="swap__in">Playing</span></span>
+      </div>
+
+      <!-- endless strip of example aliases, refilled at random as it scrolls -->
+      <div class="stage__foot">
+        <p class="sr-only">Example SpendMail addresses: ap@spendmail.com, invoices@spendmail.com, procurement@spendmail.com.</p>
+        <div class="aliases" aria-hidden="true">
+          <div class="aliases__view"><div class="aliases__track"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Put agreements to work.</span>
+    <span>© 2026 SpendRule · <a class="ink ink--quiet" href="https://spendrule.com/" target="_blank" rel="noopener">spendrule.com</a></span>
+  </footer>
+</div>
+</body>
+</html>
